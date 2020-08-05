@@ -1,0 +1,75 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#kisiler tr:nth-child(even){background-color: #f2f2f2;}
+
+#kisiler tr:hover {background-color: #ddd;}
+
+#kisiler th {
+  width:60%;
+  text-align: left;
+  border-collapse: collapse;
+  font-family: courier;
+  border: 2px solid #d6eed718;
+  
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  background-color: #d1e2d1f8;
+  color: white;
+}
+#kisiler {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#kisiler td, #kisiler th {
+
+  padding: 3px;
+  border: 2px solid #666666d8;
+}
+
+.isimekle{ border: 1px solid #0d0e0df8;
+  padding: 3px;
+  padding-left: 50px;
+  border: 2px solid #666666d8;
+
+}
+
+.numaraekle{ border: 1px solid #0d0e0df8;
+  padding: 3px;
+  padding-left: 50px;
+  border: 2px solid #666666d8;
+
+}
+
+.emailekle{ border: 1px solid #0d0e0df8;
+  padding: 3px;
+  padding-left: 50px;
+  border: 2px solid #666666d8;
+
+}
+
+h1 {
+  position: absolute;
+  bottom: 530px;
+
+  width: 60px;
+ 
+  padding-left: 100px;
+  padding-right: 100px;
+ 
+  
+
+  background-color: #cae8ca;
+  border: 2px solid #666666d8;
+}
+input.ng-invalid {
+  background-color:rgb(228, 220, 221);
+}
+input.ng-valid {
+  background-color:lightgreen;
+}
