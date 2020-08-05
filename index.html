@@ -1,0 +1,96 @@
+t<!DOCTYPE html >
+<html  ng-app="app" >
+    <head lang="en">
+        <title>kisi ekle </title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>  
+    <script src="/public/javascripts/app.js"></script>
+   
+   
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+</head>
+<h1 class="sticky">Kişi Listesi</h1>  <br><br><br>
+    <div ng-controller = "mainCtrl"> 
+      <h3>Kişi İsimleri</h3>
+      <h3> Seçilen kişi:  {{selectedName}}</h3>
+      <select ng-model="selectedName">
+        
+        <option ng-repeat="person in persons" value="{{person.name}}">{{person.name}} </option>
+        </select> 
+      
+    <table>
+     
+      <ul>
+       
+           <table  id="kisiler" >
+          <tr>
+          <th>Sırası</th>
+          <th>İsim</th>
+          <th>Güncelle</th>
+          <th>Sil</th>
+          </tr>
+          <form  novalidate>
+            <h3>İsim : </h3>
+            <input type="text" class="isimekle" ng-model="person.name"   required>
+            <h3>Numara : </h3>
+            <input type="text" class="numaraekle" ng-model="person.number"   required>
+            <h3>Email : </h3>
+            <input type="text" class="emailekle" ng-model="person.email"   required>
+          </form>
+          
+          <br><br>
+          <input type="button" class="yeniekle" ng-click="addPerson(person)" value="Yeni Kişi Ekle">
+          <br><br>
+          <tr ng-repeat="person in persons">
+           
+            <td>{{person.id}}</td>
+            
+            <td>{{person.name}}  <a href="/kisiler/kisiler.html" target="_blank">tıklayınız</a><p></p>
+              {{person.number}}
+              <p></p>
+            {{person.email}}</td>
+            
+            <td> <input type="button" class="btn3"  ng-click="updatePerson(person._id)" value="Güncelle">
+              <input type="text" ng-model="person.name"  required> </input> 
+              <input type="text" ng-model="person.number"  required></input> 
+              <input type="text" ng-model="person.email"  required> </input> 
+             </input> </td>
+            
+           
+            
+            <td><input type="button" class="btn2"ng-click="removePerson(person._id)" value="Sil"> 
+            </td>
+            
+            <br><br>
+           
+          </tr>
+         
+            
+         
+          </table>
+        </li>
+      </ul>
+       
+        <br>
+        <br>
+      
+          
+        </div>     
+    
+    <br><br><br>
+   
+    <p> <a href="https://www.linkedin.com/in/gökçeaktuğ">
+        linkedin.com/in/gökçeaktuğ </a>
+   <p> <a href="https://ggokceaktugg@gmail.com" > ggokceaktugg@gmail.com </a>
+   </p>
+    </div>
+  
+</div>
+
+
+
+    </body>
+
+</html>
+
+
+    
